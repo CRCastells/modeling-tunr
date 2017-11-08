@@ -1,17 +1,25 @@
 <h2>New Manager</h2>
-
-<form (ngSubmit)="saveManager(newManager)">
-	<label for="name">Name:</label>
-	<input name="name" [(ngModel)]="newManager.name" />
-
-	<label for="email">Email:</label>
-	<input name="email" [(ngModel)]="newManager.email" />
-
-	<label for="office_number">Office Number:</label>
-	<input name="office_number" [(ngModel)]="newManager.office_number" />
-
-	<label for="cell_phone_number">Cell Number:</label>
-	<input name="cell_phone_number" [(ngModel)]="newManager.cell_phone_number" />
-
-	<input type="submit" value="SAVE">
+<form class='container-fluid' (ngSubmit)="saveManager(newManager)">
+  <div class="form-row">
+    <div class="col">
+      <label for="name">Name:</label>
+      <input class='form-control' name="name" [(ngModel)]="newManager.name">
+    </div>
+    <div class="col">
+      <label for="email">Email:</label>
+      <input class='form-control' name="email" [(ngModel)]="newManager.email">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class='col'>
+      <label for="office_number">Office Number:</label>
+      <input class='form-control' name="office_number" [(ngModel)]="newManager.office_number">
+    </div>
+    <div class="col">
+      <label for="cell_phone_number">Cell Phone Number:</label>
+      <input class='form-control' name="cell_phone_number" [(ngModel)]="newManager.cell_phone_number">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-success" type="submit" value="Create">
 </form>

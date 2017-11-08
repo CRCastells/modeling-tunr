@@ -10,6 +10,7 @@ import { SongsNewComponent } from './songs-new/songs-new.component';
 import { SongsShowComponent } from './songs-show/songs-show.component';
 import { SongsComponent } from './songs.component';
 
+import { SongsService } from './songs.service';
 
 @NgModule({
 	declarations: [
@@ -25,6 +26,6 @@ import { SongsComponent } from './songs.component';
     FormsModule,
     
   ],
-  providers: []
+  providers: [SongsService]
 })
 export class SongsModule { }

@@ -1,34 +1,23 @@
 <h2>Managers</h2>
-
-<a class="btn" routerLink="/managers/new">Add Manager</a>
-
-<div class="managers">
-  <div class="row" *ngFor="let manager of allManagers">
-    <ul>
-      <li>
-        <h2>
-          <a routerLink="/managers/{{manager.id}}">
-            {{manager.name}}
-          </a>
-        </h2>
-      </li>
-      <li>
-        <h3>{{manager.email}}</h3>
-      </li>
-      <li>
-        <h3>{{manager.office_number}}</h3>
-      </li>
-      <li>
-        <h3>{{manager.cell_phone_number}}</h3>
-      </li>
-      <li>
-        <a routerLink="/managers/edit/{{manager.id}}">
-          Edit
-        </a>
-      </li>
-      <li>
-        <button (click)='deleteManager(manager)'>Delete</button>
-      </li>
-    </ul>
+<a routerLink="/managers/new">
+  <button class='btn btn-success text-white'>Add Manager</button>
+</a>
+<div class="artists row justify-content-center">
+  <div class="card col-7" *ngFor='let manager of allManagers'>
+    <div class="card-title">
+      <h2><a routerLink='/managers/{{manager.id}}'>{{manager.name}}</a></h2></div>
+    <div class="card-body row">
+      <ul class="list-group">
+        <li class="list-group-item">{{manager.email}}</li>
+        <li class="list-group-item">{{manager.office_number}}</li>
+        <li class="list-group-item">{{manager.cell_phone_number}}</li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <a routerLink="/managers/edit/{{manager.id}}">
+        <button class="btn btn-info">Edit</button>
+      </a>
+      <button class='btn btn-danger' (click)="deleteManager(manager)">Delete</button>
+    </div>
   </div>
 </div>

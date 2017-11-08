@@ -1,16 +1,36 @@
 var DB = require("../models").models;
-
+console.log(DB);
 var artistCreate = function() {
-	return DB.Artist.create({
-    name: 'Not right yet',
-    photoUrl: 'www.zombo.com',
-    nationality: 'Zombie',
-    instrument: 'Brains',
-    home_address: 'Atlanta'
+  return DB.Artist.create({
+    name: 'Luciano Pavarotti',
+    photoUrl: 'http://img.informador.com.mx/biblioteca/imagen/677x508/811/810055.jpg',
+    nationality: 'Italiano',
+    instrument: 'Voice',
+    home_address: '1 Strada Roma'
+  });
+};
+
+let managerCreate = () => {
+  return DB.Manager.create({
+    name: "Ricky Bobby",
+    email: "rbobby@gmail.com",
+    office_number: "516-877-0304",
+    cell_phone_number: "718-989-1231"
+  });
+};
+
+let songCreate = () => {
+  return DB.Song.create({
+    title: "The Best Song Ever",
+    duration: '3:31',
+    date_of_release: '7/13/2015',
+    album_title: 'Best Album Ever'
   });
 };
 
 artistCreate()
-.then(function() {
-	process.exit();
-});
+  .then(managerCreate)
+  .then(songCreate)
+  .then(function() {
+    process.exit();
+  });

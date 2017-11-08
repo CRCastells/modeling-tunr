@@ -1,3 +1,25 @@
-<p>
-  songs-edit works!
-</p>
+<h2>Edit Song</h2>
+<form class='container-fluid' (ngSubmit)="updateSong(updatedSong)">
+  <div class="form-row">
+    <div class="col">
+      <label for="title">Title:</label>
+      <input class='form-control' name="title" [(ngModel)]="updatedSong.title">
+    </div>
+    <div class="col">
+      <label for="duration">Duration:</label>
+      <input class='form-control' name="duration" [(ngModel)]="updatedSong.duration">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class='col'>
+      <label for="date_of_release">Date of Release:</label>
+      <input class='form-control' name="date_of_release" [(ngModel)]="updatedSong.date_of_release">
+    </div>
+    <div class="col">
+      <label for="album_title">Album Title:</label>
+      <input class='form-control' name="album_title" [(ngModel)]="updatedSong.album_title">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-primary" type="submit" value="Update">
+</form>

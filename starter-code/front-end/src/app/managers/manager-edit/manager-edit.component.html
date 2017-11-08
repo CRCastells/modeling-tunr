@@ -1,17 +1,25 @@
 <h2>Edit Manager</h2>
-
-<form (ngSubmit)="updateManager(updatedManager)">
-	<label for="name">Name:</label>
-	<input name="name" [(ngModel)]="updatedManager.name" />
-
-	<label for="email">Email:</label>
-	<input name="email" [(ngModel)]="updatedManager.email" />
-
-	<label for="office_number">Office Number:</label>
-	<input name="office_number" [(ngModel)]="updatedManager.office_number" />
-
-	<label for="cell_phone_number">Cell Number:</label>
-	<input name="cell_phone_number" [(ngModel)]="updatedManager.cell_phone_number" />
-
-	<input type="submit" value="UPDATE" />
+<form class='container-fluid' (ngSubmit)="updateManager(updatedManager)">
+  <div class="form-row">
+    <div class="col">
+      <label for="name">Name:</label>
+      <input class='form-control' name="name" [(ngModel)]="updatedManager.name">
+    </div>
+    <div class="col">
+      <label for="email">Email:</label>
+      <input class='form-control' name="email" [(ngModel)]="updatedManager.email">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class='col'>
+      <label for="office_number">Office Number:</label>
+      <input class='form-control' name="office_number" [(ngModel)]="updatedManager.office_number">
+    </div>
+    <div class="col">
+      <label for="cell_phone_number">Cell Phone Number:</label>
+      <input class='form-control' name="cell_phone_number" [(ngModel)]="updatedManager.cell_phone_number">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-primary" type="submit" value="Update">
 </form>

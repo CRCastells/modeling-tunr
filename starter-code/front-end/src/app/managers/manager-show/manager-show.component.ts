@@ -20,6 +20,6 @@ export class ManagerShowComponent implements OnInit {
   			console.log(response.json());
   			this.oneManager = response.json();
   		});
-  	})
+  	});
   }
 }

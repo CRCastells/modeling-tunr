@@ -1,20 +1,31 @@
 <h2>Edit Artist</h2>
-
-<form (ngSubmit)="updateArtist(updatedArtist)">
-  <label for="name">Name:</label>
-  <input name="name" [(ngModel)]="updatedArtist.name">
-
-  <label for="photoUrl">Photo URL:</label>
-  <input name="photoUrl" [(ngModel)]="updatedArtist.photoUrl">
-
-  <label for="nationality">Nationality:</label>
-  <input name="nationality" [(ngModel)]="updatedArtist.nationality">
-
-  <label for="instrument">Instrument:</label>
-  <input name="instrument" [(ngModel)]="updatedArtist.instrument">
-
-  <label for="home_address">Home Address:</label>
-  <input name="home_address" [(ngModel)]="updatedArtist.home_address">
-
-  <input type="submit" value="Update">
+<form class='container-fluid' (ngSubmit)="updateArtist(updatedArtist)">
+  <div class="form-row">
+    <div class="col">
+      <label for="name">Name:</label>
+      <input class='form-control' name="name" [(ngModel)]="updatedArtist.name">
+    </div>
+    <div class="col">
+      <label for="nationality">Nationality:</label>
+      <input class='form-control' name="nationality" [(ngModel)]="updatedArtist.nationality">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class='col'>
+      <label for="photoUrl">Photo URL:</label>
+      <input class='form-control' name="photoUrl" [(ngModel)]="updatedArtist.photoUrl">
+    </div>
+  </div>
+  <div class='form-row'>
+    <div class='col'>
+      <label for="instrument">Instrument:</label>
+      <input class='form-control' name="instrument" [(ngModel)]="updatedArtist.instrument">
+    </div>
+    <div class='col'>
+      <label for="home_address">Home Address:</label>
+      <input class='form-control' name="home_address" [(ngModel)]="updatedArtist.home_address">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-primary" type="submit" value="Update">
 </form>

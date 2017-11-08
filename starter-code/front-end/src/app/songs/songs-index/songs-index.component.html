@@ -1,3 +1,23 @@
-<p>
-  songs-index works!
-</p>
+<h2>Songs</h2>
+<a routerLink="/songs/new">
+  <button class='btn btn-success text-white'>Add Song</button>
+</a>
+<div class="artists row justify-content-center">
+  <div class="card col-7" *ngFor='let song of allSongs'>
+    <div class="card-title">
+      <h2><a routerLink='/songs/{{song.id}}'>{{song.title}}</a></h2></div>
+    <div class="card-body row">
+      <ul class="list-group">
+        <li class="list-group-item">{{song.album_title}}</li>
+        <li class="list-group-item">{{song.duration}}</li>
+        <li class="list-group-item">{{song.date_of_release}}</li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <a routerLink="/songs/edit/{{song.id}}">
+        <button class="btn btn-info">Edit</button>
+      </a>
+      <button class='btn btn-danger' (click)="deleteSong(song)">Delete</button>
+    </div>
+  </div>
+</div>

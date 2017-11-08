@@ -1,4 +1,4 @@
-<h2>New Artist</h2>
+<!-- <h2>New Artist</h2>
 
 <form (ngSubmit)="saveArtist(newArtist)">
   <label for="name">Name:</label>
@@ -17,4 +17,35 @@
   <input name="home_address" [(ngModel)]="newArtist.home_address">
 
   <input type="submit" value="Create">
+</form> -->
+<h2>New Artist</h2>
+<form class='container-fluid' (ngSubmit)="saveArtist(newArtist)">
+  <div class="form-row">
+    <div class="col">
+      <label for="name">Name:</label>
+      <input class='form-control' name="name" [(ngModel)]="newArtist.name">
+    </div>
+    <div class="col">
+      <label for="nationality">Nationality:</label>
+      <input class='form-control' name="nationality" [(ngModel)]="newArtist.nationality">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class='col'>
+      <label for="photoUrl">Photo URL:</label>
+      <input class='form-control' name="photoUrl" [(ngModel)]="newArtist.photoUrl">
+    </div>
+  </div>
+  <div class='form-row'>
+    <div class='col'>
+      <label for="instrument">Instrument:</label>
+      <input class='form-control' name="instrument" [(ngModel)]="newArtist.instrument">
+    </div>
+    <div class='col'>
+      <label for="home_address">Home Address:</label>
+      <input class='form-control' name="home_address" [(ngModel)]="newArtist.home_address">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-success" type="submit" value="Create">
 </form>

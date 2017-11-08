@@ -1,3 +1,25 @@
-<p>
-  songs-new works!
-</p>
+<h2>New Song</h2>
+<form class='container-fluid' (ngSubmit)="saveSong(newSong)">
+  <div class="form-row">
+    <div class="col">
+      <label for="title">Title:</label>
+      <input class='form-control' name="title" [(ngModel)]="newSong.title">
+    </div>
+    <div class="col">
+      <label for="duration">Duration:</label>
+      <input class='form-control' name="duration" [(ngModel)]="newSong.duration">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class='col'>
+      <label for="date_of_release">Date of Release:</label>
+      <input class='form-control' name="date_of_release" [(ngModel)]="newSong.date_of_release">
+    </div>
+    <div class="col">
+      <label for="album_title">Album Title:</label>
+      <input class='form-control' name="album_title" [(ngModel)]="newSong.album_title">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-success" type="submit" value="Create">
+</form>
