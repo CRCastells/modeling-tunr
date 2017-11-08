@@ -1,5 +1,4 @@
 var DB = require("../models").models;
-console.log(DB);
 var artistCreate = function() {
   return DB.Artist.create({
     name: 'Luciano Pavarotti',
